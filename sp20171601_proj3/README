@@ -1,0 +1,70 @@
+-실행 방법
+컴파일 시 make를 입력하세요.
+실행 시 ./20171601.out을 입력하세요.
+"sicsim> "창에 명령어를 입력하면 됩니다.
+
+-명령어
+(1) h[elp]
+shell이 지원하는 모든 명령을 표시합니다.
+
+(2) d[ir] 
+현재 디렉토리에 있는 파일 및 폴더를 보여줍니다.
+
+(3) q[uit]
+프로그램을 종료합니다.
+
+(4) hi[story]
+이전의 명령들을 보여줍니다. 가장 최근의 명령이 리스트의 끝에 표시됩니다.
+
+(5) du[mp] [start, end]
+1. start, end 값 모두 주어지지 않은 경우 : 마지막 주소로부터 160개의 값을 출력합니다.
+
+2. start 값만 주어진 경우 :  start 주소부터 160개의값을 출력합니다. 
+
+3. start, end 값이 모두 주어진 경우 : start 주소부터 end 주소까지의 값을 출력합니다.
+
+(6) e[dit] address, value
+address의 값을 입력받은 value 값으로 수정합니다.
+
+(7) f[ill] start, end, value
+start address부터 end address까지의 값을 입력받은 value 값으로 수정합니다.
+
+(8) reset
+모든 메모리 값을 0으로 수정합니다.
+
+(9) opcode mnemonic
+입력받은 명령어에 해당하는 opcode를 출력합니다.
+
+(10) opcodelist
+opcode의 hash table을 출력합니다.
+
+(11) assemble filename
+주어진 소스파일을 읽고 object file과 listing file을 만듭니다.
+
+(12) type filename
+파일의 내용을 출력합니다. 만약 파일이 존재하지 않으면 에러 메세지를 출력합니다.
+
+(13) symbol
+assembling 과정동안 생성된 심볼 테이블을 보여줍니다. 
+
+(14) progaddr [address]
+loader 명령어 수행을 위해 load를 시작할 주소를 지정합니다.
+address는 16진수로 입력합니다.
+
+(15) loader [filename1] [filename2] [filename3]
+입력한 object file들을 shell의 1MB 가상메모리에 load합니다.
+
+(16) run
+load된 프로그램들을 직접 실해합니다. 실행 도중 breakpoint를 만나면 register의 값을 화면에 출력합니다.
+다시 run이 입력될 때까지 수행정보를 지니고 있습니다.
+
+(17) bp [address|clear]
+bp 입력 시 모든 breakpoint를 화면에 출력합니다.
+address 입력 시 해당 주소값을 breakpoint를 지정합니다.
+clear 입력 시 모든 breakpoint를 삭제합니다.
+
+-주의사항
+Shell 명령어는 모두 소문자로만 인식합니다.
+명령에 대한 parameter는 모두 16진수로 되어있습니다. 16진수 숫자의 알파벳은 대문자 또는 소문자일 수 있습니다.
+명령어의 길이는 500자료 제한하였습니다.
+
